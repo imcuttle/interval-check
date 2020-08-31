@@ -33,11 +33,17 @@ yarn add interval-check
 
 ```javascript
 import setIntervalCheck from 'interval-check'
+
+let data
+fetch('/data').then((res) => {
+  data = res
+})
+
 const dispose = setIntervalCheck(
   () => {
-    console.log('fetching global.SOME_THING')
+    console.log('fetching /data')
   },
-  () => !!global.SOME_THING,
+  () => !!data,
   1000
 )
 ```
