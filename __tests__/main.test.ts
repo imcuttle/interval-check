@@ -3,7 +3,7 @@
  * @author imcuttle
  * @date 2018/4/4
  */
-const intervalCheck = require('../').default
+const intervalCheck = require('../src').default
 
 describe('intervalCheck', function () {
   it('should spec use', function (done) {
